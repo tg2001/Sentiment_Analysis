@@ -23,3 +23,11 @@ appeared in the sentence and in the whole dataset. That probability is used to r
 further improvement in accuracy, at the same time providing solutions for some of the above mentioned problems.
 - Online training can help in case of new words.
 - Keeping stopwords and using stemming/lemmatization might also help when used with Deep Learning.
+
+# Update after adding the Deep Learning solution:
+
+- The RNN model also could not provide any noticeable improvement. The accuracy is still around 90.6% on the test set, which was also offered by the SVM model
+- The training set accuracy goes as high as 99% during training. This may actually be the problem of the dataset, because no combination of layers could even acheive an accuracy of 92% for either the val set or the test set
+- The preprocessing of the data involved fist collecting all the vocabularies (including the stopwords) from the training set, and using them to tokenize all the sets. Words new in the val and test sets are ignored
+- The graph shows the number of results for which the surity of the answer, given by the model, is below 80%, which indicates the model is not sure about its answer
+- All the stopwords were retained in this model, and embedding layer was also used so that the model could learn the relationship between words
